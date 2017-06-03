@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://aframe.io/releases/0.2.0/aframe.js"></script>
+    </head>
+    
+    <body>
+        <a-scene>
+		
+		<!-- Asset management system. -->
+		<a-assets>
+        <img id="greenMarbel" src="img/MarbelGreen.jpg">
+		<img id="creamMarbel" src="img/MarbelCream.jpg">
+		<img id="fYellowMarbel" src="img/MarbelFadedYellow.jpg">
+		<img id="whiteMarbel" src="img/MarbelWhite.jpg">
+		<img id="yellowMarbel" src="img/MarbelYellow.jpg">
+		<!-- <img id="blackMarbel" src="img/MarbelBlack.jpg">-->
+		<img id="info" src="img/Info.jpg">
+		
+		<!-- Object and Material Import and Labelling -->
+		<a-asset-item id="object" src="models/Cathedral-Model.dae" ></a-asset-item>
+		<!--<a-asset-item id="material" src="models/Cathedral-Test-Upload.mtl"></a-asset-item>-->
+		</a-assets>
+		
+		
+		
+		
+		
+		<!-- Image Info -->
+		<a-image src="#info" width="3" height="4" position="12 5 0" rotation="0 -25 0">
+		
+		 <a-event name="mouseenter" width="6" height="6" position="6 4 4" rotation="0 0 0"></a-event>
+		 <a-event name="mouseleave"  width="3" height="4" position="12 5 0"></a-event>
+		
+		</a-image>
+		
+		<!-- Model&Material -->
+		 <a-entity collada-model="#object" scale="0.2 0.2 0.2" position="3 1 1" rotation="0 -90 0"></a-entity>
+		
+		
+		<!--
+		<a-box 		width="1" height="1" depth="1"
+                   position="0 0 0"
+                   rotation="0 40 0"
+                   scale="5 1 2"
+                   src="#greenMarbel">
+                
+			<a-animation attribute="rotation" begin="click" repeat="indefinite" to="0 360 0"></a-animation>
+		
+			 <a-event name="mouseenter" scale="4 1 6"></a-event>
+			 <a-event name="mouseleave"  scale="1 2.5 1"></a-event>
+		</a-box>
+		-->
+		
+		<!-- Camera Cursor -->
+		<a-camera position="5 4 6">
+			<a-cursor color="#FF0000"/>
+		</a-camera>
+		
+		<a-sky color="black"></a-sky>
+		
+		
+        </a-scene>
+		
+		
+    </body>
+</html>
